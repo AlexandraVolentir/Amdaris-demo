@@ -27,10 +27,6 @@
   <country code='gp' handle='guadeloupe' continent='north america' iso='312'>Guadeloupe</country>
   <country code='gu' handle='guam' continent='australasia' iso='316'>Guam</country>
   <country code='gt' handle='guatemala' continent='north america' iso='320'>Guatemala</country>
-  <country code='gn' handle='guinea' continent='africa' iso='324'>Guinea</country>
-  <country code='gw' handle='guinea-bissau' continent='africa' iso='624'>Guinea-Bissau</country>
-  <country code='gy' handle='guyana' continent='south america' iso='328'>Guyana</country>
-  <country code='ht' handle='haiti' continent='north america' iso='332'>Haiti</country>
   <country code='hm' handle='heard-island-and-mcdonald-islands' continent='antarctica' iso='334'>Heard Island and Mcdonald Islands</country>
   <country code='hn' handle='honduras' continent='north america' iso='340'>Honduras</country>
   <country code='hk' handle='hong-kong' continent='asia' iso='344'>Hong Kong</country>
