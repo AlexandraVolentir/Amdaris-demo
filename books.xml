@@ -1,5 +1,15 @@
 <?xml version="1.0"?>
 <catalog>
+ <book id="bk4004">
+      <author>Charlotte Bronte</author>
+      <title>Jane Eyre</title>
+      <genre>Fantasy</genre>
+      <price>5.44</price>
+      <publish_date>2004-04-10</publish_date>
+      <description>One of the all-time classics.
+      A gothic novel about an english governess. A book on strong moral values,
+      will power, love and feminism.</description>
+   </book>
    <book id="bk104">
       <author>Corets, Eva</author>
       <title>Oberon's Legacy</title>
