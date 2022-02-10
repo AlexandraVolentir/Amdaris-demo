@@ -3,7 +3,6 @@
   <country code='af' handle='afghanistan' continent='asia' iso='4'>Afghanistan</country>
   <country code='al' handle='albania' continent='europe' iso='8'>Albania</country>
   <country code='dz' handle='algeria' continent='africa' iso='12'>Algeria</country>
-  <country code='as' handle='american-samoa' continent='polynesia' iso='16'>American Samoa</country>
   <country code='ad' handle='andorra' continent='europe' iso='20'>Andorra</country>
   <country code='ao' handle='angola' continent='africa' iso='24'>Angola</country>
   <country code='ai' handle='anguilla' continent='north america' iso='660'>Anguilla</country>
@@ -28,7 +27,6 @@
   <country code='gu' handle='guam' continent='australasia' iso='316'>Guam</country>
   <country code='gt' handle='guatemala' continent='north america' iso='320'>Guatemala</country>
   <country code='hm' handle='heard-island-and-mcdonald-islands' continent='antarctica' iso='334'>Heard Island and Mcdonald Islands</country>
-  <country code='hn' handle='honduras' continent='north america' iso='340'>Honduras</country>
   <country code='hk' handle='hong-kong' continent='asia' iso='344'>Hong Kong</country>
   <country code='hu' handle='hungary' continent='europe' iso='348'>Hungary</country>
   <country code='is' handle='iceland' continent='europe' iso='352'>Iceland</country>
