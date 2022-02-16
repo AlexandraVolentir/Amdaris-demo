@@ -1,14 +1,86 @@
-/*
-The open close principle means
-- "open for extension" - behavior of the module can be extended,
-  we can make the module behave in new and different ways as the
-  requirements of the application change over time.
-- "closed for modification" - means that the source code of such a module
-is inviolate. No one is allowed to make source code changes to it.
+// -------------------- WRONG -------------------------
 
-Usually the OCP cannot be fully achieved, but even partial OCP implementation
-can bring dramatic improvements in the structure of the application.
+public class StudentLoan{
+   public double potential {get;set;}
+   public double yearsOfStudy {get;set; }
+}
+   public class LoanWriteUp
+   {
+     public double TotalAnalysisCalc(StudentLoan[] arrayOfStudentLoans)  {
 
-So, it is always better if changes do not propagate into existing code that
-already works.
-*/
+      double payingPotential;
+      foreach(var obj in arrayOfStudentLoans)
+      {
+         payingPotential += obj.yearsOfStudy * obj.potential;
+      }
+      return payingPotential;
+   }
+}
+
+public class StudentLoan{
+   public double potential {get;set;}
+   public double yearsOfStudy {get;set; }
+}
+public class PersonalLoan{
+   public double salary {get;set;}
+}
+public class LoanWriteUp
+{
+  public double TotalAnalysisCalc(object[] arrObjects)
+   {
+      double payingPotential = 0;
+      StudentLoan stdLoan;
+      PersonalLoan persLoan;
+      foreach(var obj in arrObjects)
+      {
+         if(obj is StudentLoan)
+         {
+            payingPotential += obj.yearsOfStudy * obj.potential;
+         }
+         else
+         {
+            PersonalLoan = (PersonalLoan)obj;
+            payingPotential = persLoan.salary - persLoan.credit/12;
+         }
+      }
+      return payingPotential;
+   }
+}
+
+// ------------------------ RIGHT -------------------------------------
+
+public abstract class Loan
+{
+   public abstract double PayingPotential();
+}
+
+public class StudentLoan: Loan
+{
+  public double potential {get;set;}
+  public double yearsOfStudy {get;set; }
+   public override double PayingPotential()
+   {
+      return yearsOfStudy * potential;
+   }
+}
+public class PersonalLoan: Loan
+{
+   public double salary {get;set;}
+   public override double PayingPotential()
+   {
+      return salary - credit/12;
+   }
+}
+
+public class LoanWriteUp
+{
+   public double TotalAnalysisCalc(Loan[] arrLoans)
+   {
+      double payingPotential =0;
+      foreach(var objLoan in arrLoans)
+      {
+         payingPotential += objLoan.PayingPotential();
+      }
+      return payingPotential;
+   }
+}
