@@ -33,7 +33,7 @@ namespace FirstPrj
         {
             sum += 500;
         }
-        public void getBank(string bankName)
+        public void getBank(ref string bankName)
         {
             bankName = "Transilvania";
         }
@@ -65,7 +65,7 @@ namespace FirstPrj
             {
                 Console.WriteLine("Thread no 2, sum = {0}", sum);
                 sum += 5;
-                Thread.Sleep(2);
+                Thread.Sleep(3000);
             }
         }
         public static void Main(string[] args)
@@ -80,7 +80,7 @@ namespace FirstPrj
             Bank b = new Bank();
             b.addTaxes(y);
             Console.WriteLine(y);
-            //b.getBank("Raiffaisen");
+            b.getBank(ref bank);
             Console.WriteLine(bank);
             int[] arr = new int[20];
 
@@ -92,7 +92,7 @@ namespace FirstPrj
             // write a method for each type of parameter modifier
             int studentLoan;
             giveStudentLoan(out studentLoan);
-            Console.WriteLine("The loan of the student would be: ", studentLoan);
+            Console.WriteLine("The loan of the student would be: {0}", studentLoan);
             string str = "Loan";
 
             // Pass as a reference parameter
@@ -124,11 +124,10 @@ namespace FirstPrj
             {
                 Console.WriteLine("Main thread. Sum = {0}", totalSum);
                 totalSum += 2;
-                Thread.Sleep(3);
+                Thread.Sleep(3000);
             }
             t.Join();
             Console.ReadKey();
-
         }
     }
 }
