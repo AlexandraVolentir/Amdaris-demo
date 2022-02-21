@@ -12,13 +12,13 @@ using System.Collections.Generic;
  * declare implicit typed variable using keyword var
  */
 
-namespace prj
+namespace ExceptionHandling
 {
     class InvalidClientEmailException : Exception
     {
         public InvalidClientEmailException() { }
         public InvalidClientEmailException(string mail)
-            : base(String.Format("Incorrect mail: {0}", mail)) // base from base class of th instance
+            : base(String.Format("Incorrect mail: {0}", mail)) // base class of th instance
         {
         }
     }
@@ -44,11 +44,11 @@ namespace prj
         public static void writeBankName(Bank bnk)
         {
             if (bnk == null)
-                throw new NullReferenceException("Student object is null.");
+                throw new NullReferenceException("Bank object is null.");
 
             Console.WriteLine(bnk.BankName);
         }
-        public static Boolean ValidateMail(string email)
+        public static Boolean validateMail(string email)
         {
 
             if (!email.EndsWith("@gmail.com"))
@@ -112,13 +112,12 @@ namespace prj
             try
             {
                 acc.Mail = "a@3gmail.com";
-                ValidateMail(acc.Mail);
+                validateMail(acc.Mail);
             }
             catch (InvalidClientEmailException ex)
             {
                 Console.WriteLine(ex.Message);
             }
-
             // write try-catch-finally block with multiple catch statemens
             string path;
             try
@@ -148,7 +147,7 @@ namespace prj
             }
             finally
             {
-                path = "default";
+                path = "default path root";
             }
 
             // InvalidCastException
@@ -166,11 +165,11 @@ namespace prj
             }
             catch (Exception err)
             {
-                Console.WriteLine("General Error");
+                Console.WriteLine("General err");
                 Console.WriteLine(err.Message);
             }
 
-            // check exception
+            // - recatch exception
             try
             {
                 check();
@@ -180,18 +179,21 @@ namespace prj
                 // recatch exception
                 Console.WriteLine("Termination of the program. Index out of range");
             }
-            // add conditional compilation symbols
+
+             // - add conditional compilation symbols
             #if DEBUG
-                Console.WriteLine("Debug version");
+                 Console.WriteLine("Debug version");
             #else
-                Console.WriteLine("Release version");
+                 Console.WriteLine("Release version");
             #endif
 
-            // declare implicit typed variable using keyword var
+            // - declare implicit typed variable using keyword var
             for (var x = 1; x < 3; x++)
                 Console.ReadKey();
             var file = "/Uers/alexandra/Documents/file.txt";
             Console.WriteLine("The absolute path for the file is: {0}", file);
         }
     }
+
+
 }
