@@ -59,7 +59,6 @@ namespace ExceptionHandling
         }
         public static void check()
         {
-            // Here, numer is longer than denom.
             int[] arr1 = { 45, 65, 72, 3440, 3433, 5 };
             int[] arr2 = { 9, 5, 6, 0, 2 };
 
