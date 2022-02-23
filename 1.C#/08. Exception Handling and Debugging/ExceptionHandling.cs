@@ -10,6 +10,7 @@ using System.Collections.Generic;
  * add conditional compilation symbols
  * use debug class to write debug information to output window
  * declare implicit typed variable using keyword var
+ * inner exceptions
  */
 
 namespace ExceptionHandling
@@ -121,7 +122,7 @@ namespace ExceptionHandling
             string path;
             try
             {
-                path = "/Users/Sandra/Desktop";
+                path = @"/Users/Sandra/Desktop";
                 var fs = new FileStream(path, FileMode.CreateNew);
             }
             catch (FileNotFoundException err)
@@ -144,6 +145,7 @@ namespace ExceptionHandling
                 Console.WriteLine("Pathul depaseste lungimea maximala disponibila");
                 Console.WriteLine(err.Message);
             }
+            
             finally
             {
                 path = "default path root";
@@ -179,20 +181,59 @@ namespace ExceptionHandling
                 Console.WriteLine("Termination of the program. Index out of range");
             }
 
-             // - add conditional compilation symbols
+            // - add conditional compilation symbols
             #if DEBUG
-                 Console.WriteLine("Debug version");
+                             Console.WriteLine("Debug version");
             #else
-                 Console.WriteLine("Release version");
+                        Console.WriteLine("Release version");
             #endif
 
             // - declare implicit typed variable using keyword var
             for (var x = 1; x < 3; x++)
                 Console.ReadKey();
-            var file = "/Uers/alexandra/Documents/file.txt";
+            var file = @"/Uers/alexandra/Documents/file.txt";
             Console.WriteLine("The absolute path for the file is: {0}", file);
+
+
+            // Inner exception
+            try
+            {
+                try
+                {
+                    Console.WriteLine("n1 = ");
+                    int number1 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("n2 = ");
+                    int number2 = Convert.ToInt32(Console.ReadLine());
+                    int divisionResult = number1 / number2;
+                    Console.WriteLine("Division = {0}", divisionResult);
+                }
+                catch (Exception err)
+                {
+                    
+                    string path1 = @"User\alexandra\Desktop\LoginsFile.txt";
+                    if (File.Exists(path1))
+                    {
+                        StreamWriter streamWriter = new StreamWriter(path1);
+                        streamWriter.Write(err.GetType().Name + err.Message + err.StackTrace);
+                        streamWriter.Close();
+                        Console.WriteLine("a problem arrived. try later");
+                    }
+                    else
+                    {
+                        throw new FileNotFoundException(path1 + "  is inexistent ", err);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("outer or current exception is: " + e.Message);
+                if (e.InnerException != null)
+                {
+                    Console.Write("inner exception : ");
+                    Console.WriteLine(String.Concat(e.InnerException.StackTrace, e.InnerException.Message));
+                }
+            }
+            Console.ReadLine();
         }
     }
-
-
 }
