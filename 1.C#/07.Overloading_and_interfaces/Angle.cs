@@ -3,17 +3,21 @@ namespace Overloading_and_interfaces
 {
     public class Angle
     {
-        private int degrees = 0, minutes = 0, seconds = 0;
+        private int degrees, minutes, seconds;
 
         public Angle()
         {
+            degrees = 0;
+            minutes = 0;
+            seconds = 0;
         }
 
         public Angle(int degrees, int minutes, int seconds)
         {
             Seconds = seconds;
             Minutes = minutes;
-            Degrees = degrees;   
+            Degrees = degrees;
+            FixAngle();
         }
 
         public int Degrees
@@ -27,7 +31,7 @@ namespace Overloading_and_interfaces
                 if (value < 0)
                 {
                     degrees = 0;
-                } 
+                }
                 else
                 {
                     degrees = value;
@@ -50,7 +54,7 @@ namespace Overloading_and_interfaces
                 }
                 else
                 {
-                   minutes = value;
+                    minutes = value;
                 }
             }
         }
@@ -92,14 +96,24 @@ namespace Overloading_and_interfaces
             Console.WriteLine(degrees + "° " + minutes + "\' " + seconds + "\'\'");
         }
 
-
         public static Angle operator +
             (Angle angle1, Angle angle2)
         {
             Angle temp = new Angle();
-            temp.Seconds = angle1.seconds + angle2.seconds;
-            temp.Minutes = angle1.minutes + angle2.minutes;
-            temp.Degrees = angle1.degrees + angle2.degrees;
+            temp.Seconds = angle1.Seconds + angle2.Seconds;
+            temp.Minutes = angle1.Minutes + angle2.Minutes;
+            temp.Degrees = angle1.Degrees + angle2.Degrees;
+            temp.FixAngle();
+            return temp;
+        }
+
+        public static Angle operator -
+            (Angle angle1, Angle angle2)
+        {
+            Angle temp = new Angle();
+            temp.seconds = angle1.Seconds - angle2.Seconds;
+            temp.minutes = angle1.Minutes - angle2.Minutes;
+            temp.degrees = angle1.Degrees - angle2.Degrees;
             temp.FixAngle();
             return temp;
         }
