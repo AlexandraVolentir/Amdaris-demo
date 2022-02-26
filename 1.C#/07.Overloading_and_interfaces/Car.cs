@@ -13,7 +13,7 @@ namespace Overloading_and_interfaces
         {
             return String.Format("ID: {0,3} Marka: {1,-7} Speed: {2,3}", ID, Marka, Speed);
         }
-        public static IComparer SortByMarka
+        public static IComparer SortBySpeed
         { get { return (IComparer)new SpeedComparer(); } }
         public int CompareTo(object obj)
         {

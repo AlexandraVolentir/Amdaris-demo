@@ -35,8 +35,6 @@ namespace Overloading_and_interfaces
             angle7.ComputeAngle();
             Console.WriteLine();
 
-
-
             angle5.ComputeAngle();
             angle6.ComputeAngle();
             
@@ -71,7 +69,7 @@ namespace Overloading_and_interfaces
                 Console.WriteLine(c);
 
             // Now sort by speed.
-            Array.Sort(myAutos, Car.SortByMarka);
+            Array.Sort(myAutos, Car.SortBySpeed);
 
             // Dump sorted array.
             Console.WriteLine("\nOrdering by speed:");
