@@ -3,11 +3,6 @@ using System.Collections;
 
 namespace Overloading_and_interfaces
 {
-    enum Comparison
-    {
-        LessThan = -1, Equal = 0, GreaterThan = 1
-    };
-
     class SpeedComparer : IComparer
     {
         int IComparer.Compare(object x, object y)
