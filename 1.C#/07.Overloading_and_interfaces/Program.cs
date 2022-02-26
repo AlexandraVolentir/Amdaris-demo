@@ -14,6 +14,12 @@ namespace Overloading_and_interfaces
             angle2.ComputeAngle();
             Console.WriteLine("The sum of the angles is: ");
             angle3.ComputeAngle();
+
+            Console.WriteLine("\n");
+            Angle angle4 = new Angle(57, 3444, 4565);
+            Console.WriteLine();
+            Angle angle5 = angle3 + angle4;
+            angle5.ComputeAngle();
             //angle1.ComputeAngle();
         }
     }

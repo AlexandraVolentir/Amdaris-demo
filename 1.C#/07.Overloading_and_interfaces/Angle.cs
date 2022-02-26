@@ -27,11 +27,7 @@ namespace Overloading_and_interfaces
                 if (value < 0)
                 {
                     degrees = 0;
-                }
-                else if (value >= 360 && (minutes != 0 || seconds !=0 ))
-                {
-                    degrees = 359;
-                }
+                } 
                 else
                 {
                     degrees = value;
@@ -52,10 +48,6 @@ namespace Overloading_and_interfaces
                 {
                     minutes += 0;
                 }
-                else if (value >= 60)
-                {
-                    minutes = 59;
-                }
                 else
                 {
                    minutes = value;
@@ -72,10 +64,6 @@ namespace Overloading_and_interfaces
                 {
                     seconds = 0;
                 }
-                else if (seconds >= 60)
-                {
-                    seconds = 59;
-                }
                 else
                 {
                     seconds = value;
@@ -83,13 +71,27 @@ namespace Overloading_and_interfaces
             }
         }
 
-       
+        public void FixAngle()
+        {
+
+            minutes += seconds / 60;
+            seconds %= 60;
+            degrees += minutes / 60;
+            minutes %= 60;
+            if (degrees == 360 && (minutes != 0 || seconds != 0))
+            { degrees = 359; }
+            if (degrees > 360)
+            {
+                degrees %= 360;
+            }
+        }
 
         public void ComputeAngle()
         {
 
             Console.WriteLine(degrees + "° " + minutes + "\' " + seconds + "\'\'");
         }
+
 
         public static Angle operator +
             (Angle angle1, Angle angle2)
@@ -98,6 +100,7 @@ namespace Overloading_and_interfaces
             temp.Seconds = angle1.seconds + angle2.seconds;
             temp.Minutes = angle1.minutes + angle2.minutes;
             temp.Degrees = angle1.degrees + angle2.degrees;
+            temp.FixAngle();
             return temp;
         }
     }
