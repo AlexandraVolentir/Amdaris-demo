@@ -29,6 +29,10 @@ namespace Creational_patterns
             Console.WriteLine("\nA new loan was created : \n");
             Console.WriteLine("Loan Type: {0}\nSum: {1}\nAnnual Rate: {2}",
                 loan1.LoanType, loan1.SumOfMoney, loan1.Rate);
+
+            Singleton singleton;
+
+
             Console.ReadKey();
         }
     }
