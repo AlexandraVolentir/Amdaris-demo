@@ -7,4 +7,4 @@ We can easily retrieve data from any object that implements the IENumerable<T> I
 
 The main goal of LINQ is to add "general purpose query facilities" to
 the .NET Framework that apply to all sources of information, not just
-relational XML data.
+relational XML data.    
