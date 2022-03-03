@@ -34,6 +34,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AccountAnalyser.cs" />
+    <Compile Include="Account.cs" />
+    <Compile Include="AutoLoanService.cs" />
+    <Compile Include="StudentLoanService.cs" />
+    <Compile Include="MortageLoanService.cs" />
+    <Compile Include="HomeEquityLoanService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
