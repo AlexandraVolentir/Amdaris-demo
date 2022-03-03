@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Events", "Events", "{BA3814
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.Creational_patterns", "16.Creational_patterns\16.Creational_patterns.csproj", "{B3A6453B-51DC-44D8-82A7-CA525911619D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Classes_in_csharp", "05.Classes_in_Csharp\05.Classes_in_csharp.csproj", "{CC4F29E9-E365-410D-972D-432B7BCC763D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
@@ -59,6 +61,10 @@ Global
 		{B3A6453B-51DC-44D8-82A7-CA525911619D}.Debug|anycpu.Build.0 = Debug|anycpu
 		{B3A6453B-51DC-44D8-82A7-CA525911619D}.Release|anycpu.ActiveCfg = Release|anycpu
 		{B3A6453B-51DC-44D8-82A7-CA525911619D}.Release|anycpu.Build.0 = Release|anycpu
+		{CC4F29E9-E365-410D-972D-432B7BCC763D}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{CC4F29E9-E365-410D-972D-432B7BCC763D}.Debug|anycpu.Build.0 = Debug|anycpu
+		{CC4F29E9-E365-410D-972D-432B7BCC763D}.Release|anycpu.ActiveCfg = Release|anycpu
+		{CC4F29E9-E365-410D-972D-432B7BCC763D}.Release|anycpu.Build.0 = Release|anycpu
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
