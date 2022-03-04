@@ -129,7 +129,7 @@ namespace Encoding_disposal_garbagecollection
 
         public static void UseDisposable()
         {
-            // if Dispose() was not called - file stream remains open while the application is runnut
+            // if Dispose() was not called - file stream remains open while the application is run
 
             //FileStream fs = new FileStream("file1", FileMode.Open);
             //var str = "dog";
@@ -139,7 +139,7 @@ namespace Encoding_disposal_garbagecollection
             //fs.Dispose();
             //Console.WriteLine();
 
-            //using statement provides a syntactic shortcut for calling Disposable on objects that implement idisposible
+            //using statement provides a syntactic shortcut for calling Disposable on objects that implement idisposible, so we'll use it instead
 
             using (FileStream fs = new FileStream("file1.txt", FileMode.Open))
                 {
