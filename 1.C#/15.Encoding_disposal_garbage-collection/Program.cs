@@ -3,18 +3,6 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 
-/*
- use encodings in writing to file stream
- use string formatting, searching and comparing in you application
- use timespan in you application
- use datetime in your application
- use datetimeoffset in your application
- use timezone in your application
- use cultureinfo when working with strings and numbers
- implement idisposable in your application
- use finalizers in your application
- */
-
 namespace Encoding_disposal_garbagecollection
 {
     class MainClass
