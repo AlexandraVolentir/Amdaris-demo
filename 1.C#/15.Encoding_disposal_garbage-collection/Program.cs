@@ -22,6 +22,11 @@ namespace Encoding_disposal_garbagecollection
 
         public static void Searching()
         {
+            string test = "grey fluffy dog";
+            Console.WriteLine(test.StartsWith("grey"));
+            Console.WriteLine(test.Contains("fluffy"));
+            Console.WriteLine(test.EndsWith("fox"));
+
         }
 
         public static void Formatting()
@@ -134,15 +139,15 @@ namespace Encoding_disposal_garbagecollection
             //fs.Dispose();
             //Console.WriteLine();
 
-            // using statement provides a syntactic shortcut for calling Disposable on objects that implement idisposible
+            //using statement provides a syntactic shortcut for calling Disposable on objects that implement idisposible
 
             using (FileStream fs = new FileStream("file1.txt", FileMode.Open))
-            {
-                var str = "dog";
-                var bytes = Encoding.ASCII.GetBytes(str);
-                var bytesCount = Encoding.ASCII.GetByteCount(str);
-                fs.Write(bytes, 0, bytesCount);
-            }
+                {
+                    var str = "white puppy";
+                    var bytes = Encoding.ASCII.GetBytes(str);
+                    var bytesCount = Encoding.ASCII.GetByteCount(str);
+                    fs.Write(bytes, 0, bytesCount);
+                }
             Console.WriteLine();
         }
 

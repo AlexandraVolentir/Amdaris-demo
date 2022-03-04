@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
-    <ProjectGuid>{623B5C71-D05A-404B-A03A-0F3F956CF301}</ProjectGuid>
+    <ProjectGuid>{BF620B61-1191-4A76-B952-80C5A1224DCA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Encoding_disposal_garbagecollection</RootNamespace>
     <AssemblyName>15.Encoding_disposal_garbage-collection</AssemblyName>
@@ -36,7 +36,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="file1.txt" />
+    <None Include="bin\Debug\file1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

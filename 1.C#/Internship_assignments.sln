@@ -17,11 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.Files_and_Streams", "13.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.Csharp_4_6_7_8", "14.Csharp_4_6_7_8\14.Csharp_4_6_7_8.csproj", "{F30FEFA2-FACA-4D7D-9862-BA08B4F8E098}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Events", "Events", "{BA381488-6B09-4F0B-9835-86860DD67711}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.Creational_patterns", "16.Creational_patterns\16.Creational_patterns.csproj", "{B3A6453B-51DC-44D8-82A7-CA525911619D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Classes_in_csharp", "05.Classes_in_Csharp\05.Classes_in_csharp.csproj", "{CC4F29E9-E365-410D-972D-432B7BCC763D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.Encoding_disposal_garbage-collection", "15.Encoding_disposal_garbage-collection\15.Encoding_disposal_garbage-collection.csproj", "{BF620B61-1191-4A76-B952-80C5A1224DCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +65,10 @@ Global
 		{CC4F29E9-E365-410D-972D-432B7BCC763D}.Debug|anycpu.Build.0 = Debug|anycpu
 		{CC4F29E9-E365-410D-972D-432B7BCC763D}.Release|anycpu.ActiveCfg = Release|anycpu
 		{CC4F29E9-E365-410D-972D-432B7BCC763D}.Release|anycpu.Build.0 = Release|anycpu
+		{BF620B61-1191-4A76-B952-80C5A1224DCA}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{BF620B61-1191-4A76-B952-80C5A1224DCA}.Debug|anycpu.Build.0 = Debug|anycpu
+		{BF620B61-1191-4A76-B952-80C5A1224DCA}.Release|anycpu.ActiveCfg = Release|anycpu
+		{BF620B61-1191-4A76-B952-80C5A1224DCA}.Release|anycpu.Build.0 = Release|anycpu
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
