@@ -34,9 +34,9 @@ namespace Overloading_and_interfaces
             Console.WriteLine("The sum of the angles is: ");
             angle7.ComputeAngle();
             Console.WriteLine();
-
-            angle5.ComputeAngle();
             angle6.ComputeAngle();
+            angle5.ComputeAngle();
+         
             
             Console.WriteLine("The difference of the angles is: ");
             Angle angle8 = angle6 - angle5;

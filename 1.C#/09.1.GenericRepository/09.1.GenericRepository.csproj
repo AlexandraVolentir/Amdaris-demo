@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
+    <ProjectGuid>{3C324FF1-9461-4BEB-BB07-09A5F35BCCAC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GenericRepository</RootNamespace>
+    <AssemblyName>09.1.GenericRepository</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <IntermediateOutputPath>obj\anycpu\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|anycpu' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <IntermediateOutputPath>obj\anycpu\Release</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="Repositories\IBaseRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\Car.cs" />
+    <Compile Include="Entities\User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

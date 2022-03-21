@@ -8,6 +8,7 @@ namespace Functional_paradigm_LINQ
 {
     class Program
     {
+        public delegate void petanim(string pet);
         public static void OutputList(List<Account> list)
         {
             foreach (var person in list)
@@ -16,6 +17,13 @@ namespace Functional_paradigm_LINQ
             }
             Console.WriteLine("\n");
         }
+        static bool CompareUsers(object a, object b)
+        {
+            var user1 = (Account)a;
+            var user2 = (Account)b;
+            return user1.YearsOfMembership > user2.YearsOfMembership;
+        }
+
         public static void Main(string[] args)
         {
             List<Account> listOfPeople = ListManager.LoadSampleData();
@@ -38,28 +46,30 @@ namespace Functional_paradigm_LINQ
 
             sumOfMembershipYears = listOfPeople.Where(x => x.BirthDate.Month == 3).Sum(x => x.YearsOfMembership);
             Console.WriteLine($"Sum of membership years: {sumOfMembershipYears}");
-
-
-            // via delegates
-            // rewrite using anonymous functions
-            // rewrite using lambda expressions
-            // using extension methods on the collection
-            // using select/where operators on the collection
-
            
 
             var userArray = listOfPeople.ToArray();
-            
-            // BubbleSorter.Sort(userArray, new BubbleSorter.IsAGreaterThanBDeleGate(CompareUsers));
            
-            SelectionSorter.Sort(userArray, CompareUsers);
-            BubbleSorter.Sort(userArray, delegate (User a, User b) { return a.Age > b.Age; });
-            BubbleSorter.Sort(userArray, (a, b) => a.Age > b.Age);
+            BubbleSorter.Sort(userArray, CompareUsers);
+
+            var sourceObjects = new object[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            //BubbleSorter.Sort(sourceObjects, BubbleSorter.IsAGreaterThanBDeleGate);
+
+            // lambda expressions
+            BubbleSorter.Sort(userArray, delegate (Account a, Account b) { return a.YearsOfMembership > b.YearsOfMembership; });
+            BubbleSorter.Sort(userArray, (a, b) => a.YearsOfMembership > b.YearsOfMembership);
 
             foreach (var user in userArray)
             {
-                Console.WriteLine($"{user.FirstName} {user.Age}");
+                Console.WriteLine($"{user.FirstName} {user.YearsOfMembership}");
             }
+
+            petanim p = delegate (string mypet)
+            {
+                Console.WriteLine("My favorite pet is: {0}",
+                                                     mypet);
+            };
+            p("Dog");
 
             Console.ReadLine();
 

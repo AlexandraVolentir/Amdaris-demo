@@ -43,6 +43,7 @@
     <Compile Include="StudentLoan.cs" />
     <Compile Include="StudentLoanFactory.cs" />
     <Compile Include="Singleton.cs" />
+    <Compile Include="Product.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

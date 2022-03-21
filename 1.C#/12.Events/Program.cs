@@ -21,6 +21,11 @@ namespace Events
             accountAnalyser.AccountAnalysed += autoLoanService.OnAccountAnalysed;
             accountAnalyser.AccountAnalysed += mortageLoanService.OnAccountAnalysed;
             accountAnalyser.AccountAnalysed += homeEquityLoanService.OnAccountAnalysed;
+
+            accountAnalyser.AccountAnalysed -= studentLoanService.OnAccountAnalysed;
+            accountAnalyser.AccountAnalysed -= autoLoanService.OnAccountAnalysed;
+            accountAnalyser.AccountAnalysed -= mortageLoanService.OnAccountAnalysed;
+            accountAnalyser.AccountAnalysed -= homeEquityLoanService.OnAccountAnalysed;
             accountAnalyser.Analyze(account);
         }
     }
