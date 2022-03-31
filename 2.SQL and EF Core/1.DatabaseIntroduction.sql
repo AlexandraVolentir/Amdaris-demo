@@ -144,7 +144,7 @@ INSERT INTO Internship.dbo.Client VALUES(4, NULL, 'Patricia', 'Hodorogea', 'F', 
 INSERT INTO Internship.dbo.AcademicRecord VALUES(4,0, 7.8, 6.55);
 INSERT INTO Internship.dbo.LoanUnderwriting VALUES(4, 'FALSE',  NULL, NULL, 4);
 INSERT INTO Internship.dbo.Loan VALUES(4, 'NORMAL RATE STUDENT LOAN', 10000, 5, 'Set up');
-INSERT INTO Internship.dbo.Account VALUES(3, NULL, 3, 3, 'PENDING', 'SAND', SYSDATETIME());
+INSERT INTO Internship.dbo.Account VALUES(4, NULL, 4, 4, 'PENDING', NULL, SYSDATETIME());
 
 UPDATE  Internship.dbo.Client 
 SET AccountID = 4
@@ -154,3 +154,10 @@ UPDATE Internship.dbo.LoanUnderwriting
 SET IsAproved = 'Not Aproved',
 ApprovalDate = SYSDATETIME()
 WHERE LoanUnderwritingID = 4;
+
+--INSERT INTO Internship.dbo.
+
+-- unrelated updates
+INSERT INTO Internship.dbo.Client VALUES(5, NULL, 'Vadim', 'Dascalau', 'M', '45947847949', 'Romania', 'Strada Carol Davila 40', 'vadim.dascalau567@gmail.com', 'International Student', SYSDATETIME());
+
+INSERT INTO Internship.dbo.Loan VALUES(5, 'International Student Loan', 23000, 7, 'Halfway');
